@@ -1,0 +1,73 @@
+﻿<bg child-control-height='false' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+  <tab-selector tab-tag='new-tab'/>
+  <tab tags='new-tab' tab-name='Left Note'>
+    <horizontal horizontal-fit='PreferredSize' vertical-fit='PreferredSize' anchor-pos-y='-5'>
+      <vertical vertical-fit='PreferredSize' horizontal-fit='PreferredSize' pad='2' pref-width='50' bg='round-rect-panel'>
+        <vertical pad-bottom='2'></vertical>
+        <image src='AmblyopiaSaber.UI.Images.left_eye.png' preserve-aspect='true' pref-width='30' pref-height='16'/>
+        <vertical pad-bottom='2'></vertical>
+        <text align='Center' text='Opacity:' font-size='6'></text>
+        <slider-setting text='' size-delta-x='10' font-size='0' min='0' max='1' increment='0.01' value='left-note-left-eye-visibility' apply-on-change='true' on-change='update-notes' hover-hint='How transparent the left note is in your left eye.' font-align='Right' pref-width='25' anchor-pos-x='15' move-to-center='true'/>
+        <text align='Center' text='Position Adjust:' font-size='6'></text>
+        <increment-setting text='X' value='ll-x' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The x position (left/right) offset of the left note in your left eye.' />
+        <increment-setting text='Y' value='ll-y' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The y position (up/down) offset of the left note in your left eye.' />
+        <increment-setting text='Z' value='ll-z' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The z position (forward/back) offset of the left note in your left eye.' />
+      </vertical>
+      <horizontal pad='2'></horizontal>
+      <vertical vertical-fit='PreferredSize' horizontal-fit='PreferredSize' pad='2' pref-width='50' bg='round-rect-panel'>
+        <vertical pad-bottom='2'></vertical>
+        <image src='AmblyopiaSaber.UI.Images.right_eye.png' preserve-aspect='true' pref-width='30' pref-height='16'/>
+        <vertical pad-bottom='2'></vertical>
+        <text align='Center' text='Transparency:' font-size='6'></text>
+        <slider-setting text='' size-delta-x='10' font-size='0' min='0' max='1' increment='0.01' value='left-note-right-eye-visibility' apply-on-change='true' on-change='update-notes' hover-hint='How transparent the left note is in your right eye.' font-align='Right' pref-width='25' anchor-pos-x='15' move-to-center='true'/>
+        <text align='Center' text='Position Adjust:' font-size='6'></text>
+        <increment-setting text='X' value='lr-x' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The x position (left/right) offset of the left note in your right eye.' />
+        <increment-setting text='Y' value='lr-y' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The y position (up/down) offset of the left note in your right eye.' />
+        <increment-setting text='Z' value='lr-z' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The z position (forward/back) offset of the left note in your right eye.' />
+      </vertical>
+    </horizontal>
+  </tab>
+  <tab tags='new-tab' tab-name='Right Note'>
+    <horizontal horizontal-fit='PreferredSize' vertical-fit='PreferredSize' anchor-pos-y='-5'>
+      <vertical vertical-fit='PreferredSize' horizontal-fit='PreferredSize' pad='2' pref-width='50' bg='round-rect-panel'>
+        <vertical pad-bottom='2'></vertical>
+        <image src='AmblyopiaSaber.UI.Images.left_eye.png' preserve-aspect='true' pref-width='30' pref-height='16'/>
+        <vertical pad-bottom='2'></vertical>
+        <text align='Center' text='Opacity:' font-size='6'></text>
+        <slider-setting text='' size-delta-x='10' font-size='0' min='0' max='1' increment='0.01' value='right-note-left-eye-visibility' apply-on-change='true' on-change='update-notes' hover-hint='How transparent the left note is in your left eye.' font-align='Right' pref-width='25' anchor-pos-x='15' move-to-center='true'/>
+        <text align='Center' text='Position Adjust:' font-size='6'></text>
+        <increment-setting text='X' value='rl-x' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The x position (left/right) offset of the right note in your left eye.' />
+        <increment-setting text='Y' value='rl-y' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The y position (up/down) offset of the right note in your left eye.' />
+        <increment-setting text='Z' value='rl-z' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The z position (forward/back) offset of the right note in your left eye.' />
+      </vertical>
+      <horizontal pad='2'></horizontal>
+      <vertical vertical-fit='PreferredSize' horizontal-fit='PreferredSize' pad='2' pref-width='50' bg='round-rect-panel'>
+        <vertical pad-bottom='2'></vertical>
+        <image src='AmblyopiaSaber.UI.Images.right_eye.png' preserve-aspect='true' pref-width='30' pref-height='16'/>
+        <vertical pad-bottom='2'></vertical>
+        <text align='Center' text='Transparency:' font-size='6'></text>
+        <slider-setting text='' size-delta-x='10' font-size='0' min='0' max='1' increment='0.01' value='right-note-right-eye-visibility' apply-on-change='true' on-change='update-notes' hover-hint='How transparent the left note is in your right eye.' font-align='Right' pref-width='25' anchor-pos-x='15' move-to-center='true'/>
+        <text align='Center' text='Position Adjust:' font-size='6'></text>
+        <increment-setting text='X' value='rr-x' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The x position (left/right) offset of the right note in your right eye.' />
+        <increment-setting text='Y' value='rr-y' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The y position (up/down) offset of the right note in your right eye.' />
+        <increment-setting text='Z' value='rr-z' apply-on-change='true' on-change='update-notes' min='-1' max='1' increment='0.01' hover-hint='The z position (forward/back) offset of the right note in your right eye.' />
+      </vertical>
+    </horizontal>
+  </tab>
+  <modal id="warningModal" show-event="open-warningModal" hide-event="close-warningModal,closeAllModals" move-to-center="true" size-delta-y="45" size-delta-x="60">
+    <vertical>
+      <horizontal bg='panel-top' pad-left='10' pad-right='10' horizontal-fit='PreferredSize'>
+        <text text='Warning' align='Center' font-size='7' />
+      </horizontal>
+      <vertical horizontal-fit="PreferredSize" vertical-fit="Unconstrained">
+        <vertical pref-width="53" horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
+          <text id="warning-text" text="These settings only work when you have the correct notes selected. Make sure to select the Seperate Eye Transparency Notes in Custom Notes." align="Center" word-wrapping="true" />
+        </vertical>
+      </vertical>
+      <horizontal pref-width="50" horizontal-fit="PreferredSize" vertical-fit="PreferredSize" spacing="2" anchor-pos-y="50" >
+        <button id="dontShowButton" on-click="warningDontShowPressed" text="Don't show again" pad="0" pref-height="8" pref-width="30" anchor-pos-y="25"></button>
+        <button id="okButton" on-click="warningOKPressed" text="OK" pad="0" pref-height="8" pref-width="20" anchor-pos-y="25"></button>
+      </horizontal>
+    </vertical>
+  </modal>
+</bg>
