@@ -23,8 +23,11 @@ namespace AmblyopiaSaber
         {
             Instance = this;
             Log = logger;
-            zenjector.OnApp<AmblyopiaSaberCoreInstaller>().WithParameters(config.Generated<PluginConfig>());
-            zenjector.OnMenu<AmblyopiaSaberMenuInstaller>();
+         
+
+            zenjector.Install<AmblyopiaSaberCoreInstaller>(Location.App, config.Generated<PluginConfig>());
+            zenjector.Install<AmblyopiaSaberMenuInstaller>(Location.Menu);
+
         }
 
         [OnStart]
