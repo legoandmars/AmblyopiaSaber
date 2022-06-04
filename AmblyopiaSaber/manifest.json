@@ -3,9 +3,9 @@
   "id": "AmblyopiaSaber",
   "name": "AmblyopiaSaber",
   "author": "Bobbie, Marco",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "gameVersion": "1.19.1",
+  "gameVersion": "1.22.1",
   "dependsOn": {
     "BSIPA": "^4.0.5",
     "Custom Notes": "^2.0.0"

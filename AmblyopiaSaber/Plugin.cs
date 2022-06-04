@@ -22,8 +22,7 @@ namespace AmblyopiaSaber
         public Plugin(IPALogger logger, IPA.Config.Config config, Zenjector zenjector)
         {
             Instance = this;
-            Log = logger;
-         
+            Log = logger;         
 
             zenjector.Install<AmblyopiaSaberCoreInstaller>(Location.App, config.Generated<PluginConfig>());
             zenjector.Install<AmblyopiaSaberMenuInstaller>(Location.Menu);

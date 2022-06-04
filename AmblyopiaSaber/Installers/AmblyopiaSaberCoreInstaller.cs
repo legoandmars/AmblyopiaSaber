@@ -1,7 +1,9 @@
 ﻿using AmblyopiaSaber.Config;
-using AmblyopiaSaber.Providers;
 using SiraUtil.Interfaces;
 using Zenject;
+using SiraUtil.Objects.Beatmap;
+using SiraUtil.Extras;
+using AmblyopiaSaber.Data;
 
 namespace AmblyopiaSaber.Installers
 {
@@ -22,10 +24,16 @@ namespace AmblyopiaSaber.Installers
         public override void InstallBindings()
         {
             Container.BindInstance(_pluginConfig).AsSingle();
-
-            Container.Bind(typeof(IModelProvider), typeof(GameNoteProvider)).To<GameNoteProvider>().AsSingle();
+            Container.RegisterRedecorator(new BasicNoteRegistration(Modify));
+            //Container.Bind(typeof(IModelProvider), typeof(GameNoteProvider)).To<GameNoteProvider>().AsSingle();
             //Container.Bind(typeof(IModelProvider), typeof(CustomBombNoteProvider)).To<CustomBombNoteProvider>().AsSingle();
         }
 
+        public GameNoteController Modify(GameNoteController original)
+        {
+            //if (!CanSetup) return original;
+            original.gameObject.AddComponent<AmblyopiaController>();
+            return original;
+        }
     }
 }

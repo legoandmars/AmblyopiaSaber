@@ -11,6 +11,7 @@ namespace AmblyopiaSaber.Utils
             // cursed one liner
             notePreview = AssetBundle.LoadFromStream(Assembly.GetExecutingAssembly().GetManifestResourceStream("AmblyopiaSaber.Resources.embedded_notes.bloq")).LoadAsset<GameObject>("assets/_customnote.prefab");
             UnityEngine.Object.DontDestroyOnLoad(notePreview);
+           
         }
     }
 }
