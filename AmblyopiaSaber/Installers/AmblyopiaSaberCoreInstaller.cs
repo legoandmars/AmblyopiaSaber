@@ -27,8 +27,6 @@ namespace AmblyopiaSaber.Installers
             Container.RegisterRedecorator(new BasicNoteRegistration(DecorateNote));
             Container.RegisterRedecorator(new BurstSliderHeadNoteRegistration(DecorateNote));
             Container.RegisterRedecorator(new BurstSliderNoteRegistration(DecorateSlider));
-            //Container.Bind(typeof(IModelProvider), typeof(GameNoteProvider)).To<GameNoteProvider>().AsSingle();
-            //Container.Bind(typeof(IModelProvider), typeof(CustomBombNoteProvider)).To<CustomBombNoteProvider>().AsSingle();
         }
 
         public GameNoteController DecorateNote(GameNoteController original)
