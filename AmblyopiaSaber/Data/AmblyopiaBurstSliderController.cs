@@ -6,12 +6,12 @@ using Zenject;
 
 namespace AmblyopiaSaber.Data
 {
-    public class AmblyopiaController : MonoBehaviour, INoteControllerNoteWasCutEvent, INoteControllerNoteWasMissedEvent, INoteControllerDidInitEvent, INoteControllerNoteDidDissolveEvent
+    public class AmblyopiaBurstSliderController : MonoBehaviour, INoteControllerNoteWasCutEvent, INoteControllerNoteWasMissedEvent, INoteControllerDidInitEvent, INoteControllerNoteDidDissolveEvent
     {
         private PluginConfig _pluginConfig;
 
         protected Transform noteCube;
-        private GameNoteController _gameNoteController;
+        private BurstSliderGameNoteController _burstSliderGameNoteController;
         // private CustomNoteColorNoteVisuals _customNoteColorNoteVisuals;
 
         protected GameObject activeNote;
@@ -23,14 +23,14 @@ namespace AmblyopiaSaber.Data
         {
             _pluginConfig = pluginConfig;
             gameObject.GetComponent<ColorNoteVisuals>().didInitEvent += AmblyopiaController_didInitEvent;
-            _gameNoteController = GetComponent<GameNoteController>();
+            _burstSliderGameNoteController = GetComponent<BurstSliderGameNoteController>();
 
-            _gameNoteController.didInitEvent.Add(this);
-            _gameNoteController.noteWasCutEvent.Add(this);
-            _gameNoteController.noteWasMissedEvent.Add(this);
-            _gameNoteController.noteDidDissolveEvent.Add(this);
+            _burstSliderGameNoteController.didInitEvent.Add(this);
+            _burstSliderGameNoteController.noteWasCutEvent.Add(this);
+            _burstSliderGameNoteController.noteWasMissedEvent.Add(this);
+            _burstSliderGameNoteController.noteDidDissolveEvent.Add(this);
 
-            noteCube = _gameNoteController.gameObject.transform.Find("NoteCube");
+            noteCube = _burstSliderGameNoteController.gameObject.transform.Find("NoteCube");
         }
 
         private void AmblyopiaController_didInitEvent(ColorNoteVisuals arg1, NoteControllerBase noteController)
@@ -45,7 +45,7 @@ namespace AmblyopiaSaber.Data
 
         public void HandleNoteControllerDidInit(NoteControllerBase noteController)
         {
-            NoteUtils.ApplyConfigToNote(_pluginConfig, noteController, false);
+            NoteUtils.ApplyConfigToNote(_pluginConfig, noteController, true);
         }
 
         public void HandleNoteControllerNoteWasCut(NoteController nc, in NoteCutInfo _)

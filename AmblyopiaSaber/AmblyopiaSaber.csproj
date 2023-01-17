@@ -138,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\PluginConfig.cs" />
+    <Compile Include="Data\AmblyopiaBurstSliderController.cs" />
     <Compile Include="Data\AmblyopiaController.cs" />
     <Compile Include="Data\EyeData.cs" />
     <Compile Include="Data\NoteEyeData.cs" />

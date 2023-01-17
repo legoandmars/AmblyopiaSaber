@@ -24,15 +24,22 @@ namespace AmblyopiaSaber.Installers
         public override void InstallBindings()
         {
             Container.BindInstance(_pluginConfig).AsSingle();
-            Container.RegisterRedecorator(new BasicNoteRegistration(Modify));
+            Container.RegisterRedecorator(new BasicNoteRegistration(DecorateNote));
+            Container.RegisterRedecorator(new BurstSliderHeadNoteRegistration(DecorateNote));
+            Container.RegisterRedecorator(new BurstSliderNoteRegistration(DecorateSlider));
             //Container.Bind(typeof(IModelProvider), typeof(GameNoteProvider)).To<GameNoteProvider>().AsSingle();
             //Container.Bind(typeof(IModelProvider), typeof(CustomBombNoteProvider)).To<CustomBombNoteProvider>().AsSingle();
         }
 
-        public GameNoteController Modify(GameNoteController original)
+        public GameNoteController DecorateNote(GameNoteController original)
         {
-            //if (!CanSetup) return original;
             original.gameObject.AddComponent<AmblyopiaController>();
+            return original;
+        }
+
+        public BurstSliderGameNoteController DecorateSlider(BurstSliderGameNoteController original)
+        {
+            original.gameObject.AddComponent<AmblyopiaBurstSliderController>();
             return original;
         }
     }
