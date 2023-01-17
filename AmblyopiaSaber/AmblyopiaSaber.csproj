@@ -146,7 +146,6 @@
     <Compile Include="Managers\MenuButtonManager.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\GameNoteProvider.cs" />
     <Compile Include="UI\AmblyopiaFlowCoordinator.cs" />
     <Compile Include="UI\AmblyopiaSettingsView.cs" />
     <Compile Include="Utils\NoteUtils.cs" />

@@ -44,8 +44,10 @@ namespace AmblyopiaSaber.UI
             {
                 Plugin.Log.Info("LAST NOTE IS..");
                 Plugin.Log.Info(CustomNotes.Utilities.LayerUtils.pluginConfig.LastNote);
+               
                 if (!ignoringWarnings && !CustomNotes.Utilities.LayerUtils.pluginConfig.LastNote.ToLower().StartsWith("seperate"))
                 {
+               
                     parserParams.EmitEvent("open-warningModal");
                     // warning msg to say to apply the note
                 }
@@ -163,6 +165,7 @@ namespace AmblyopiaSaber.UI
             ColorizeCustomNote(_gameplaySetupViewController.colorSchemesSettings.GetSelectedColorScheme().saberBColor, 1, noteDotRight);
 
             ApplySettingsToNotes();
+       
         }
         private GameObject CreatePreviewNote(GameObject note, Transform transform, Vector3 localPosition)
         {
